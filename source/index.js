@@ -1,4 +1,4 @@
-const Instrument = require('./lib/Instrument');
+const Instrument = require('./Instrument');
 
 const instrument = new Instrument();
 instrument.Instrument = Instrument;

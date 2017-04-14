@@ -2,8 +2,11 @@
   "name": "c9m-instrument-server-monitor",
   "version": "0.1.0",
   "description": "Cloud9Metrics instrument for server monitoring",
-  "main": "index.js",
-  "scripts": {},
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "babel source --out-dir build",
+    "prepublish": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cloud9Trader/c9m-instrument-server-monitor.git"
@@ -17,5 +20,10 @@
   "dependencies": {
     "c9m-sensor-disk-usage": "^0.1.0",
     "c9m-sensor-system-memory": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   }
 }
